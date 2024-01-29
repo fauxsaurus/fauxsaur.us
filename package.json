@@ -1,0 +1,14 @@
+{
+	"name": "minifyre.github.io",
+	"version": "1.0.0",
+	"description": "The minify.re website.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Andrew R. H. Quinn",
+	"devDependencies": {
+		"@11ty/eleventy": "^2.0.1"
+	}
+}
