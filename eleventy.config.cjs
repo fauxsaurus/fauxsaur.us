@@ -1,5 +1,6 @@
 const {EleventyI18nPlugin} = require('@11ty/eleventy')
 const Image = require('@11ty/eleventy-img')
+const sassPlugin = require('eleventy-sass')
 const path = require('node:path')
 
 module.exports = eleventyConfig => {
@@ -9,6 +10,8 @@ module.exports = eleventyConfig => {
 
 	/** @note {defaultLanguage: any valid BCP 47 tag} */
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {defaultLanguage: 'en-US'})
+	eleventyConfig.addPlugin(sassPlugin)
+
 	/** @note _prefix denotes that these are custom filters that should hopefully not interfere with others if newer filters are added with similar names */
 	/** @note this could cause issues if a person's hyphenated last name is ever used as a page name. */
 	eleventyConfig.addFilter('_kebab2titleCase', function (string) {

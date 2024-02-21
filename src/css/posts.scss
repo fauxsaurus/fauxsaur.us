@@ -1,59 +1,48 @@
-.posts
-{
-	list-style-type:none;
-	margin-left:0;
+.posts {
+	list-style-type: none;
+	margin-left: 0;
 }
 /*@note THIS WILL NEED TO CHANGE IN THE FUTURE IF EMBEDDING 
 		RECENT/RELATED ARTICLES AT THE BOTTOM OF PAGES!!*/
-	.post:first-child
-	{
-		width:100%;
-	}
-	.post:not(:first-child)
-	{
-		font-size:0.75rem;
-	}
-		.post
-		{
-			float:left;
-			padding:1rem;
-		}
+.post:first-child {
+	width: 100%;
+}
+.post:not(:first-child) {
+	font-size: 0.75rem;
+}
+.post {
+	float: left;
+	padding: 1rem;
+}
 
-		.post div
-		{
-			position:relative;
-		}
-			.post img
-			{
-				width:100%;
-			}
-			.post b,
-			.post date
-			{
-				color:#fff;
-				padding:0.5em 1em;
-				position:absolute;
-				text-shadow:0 0 0.5em #000;
-			}
-			.post b
-			{
-			
-				left:0;
-				top:0;
-			}
-			.post date
-			{
-				bottom:0;
-				padding:0.5em 1em;
-				position:absolute;
-				right:0;
-			}
-			.post a:hover b
-			{
-				text-shadow:0 0 0.5em #fff;
-			}
-		.post .desc
-		{
-			line-height:120%;
-			margin-top:0;
-		}
+.post div {
+	position: relative;
+}
+.post img {
+	height: auto;
+	width: 100%;
+}
+.post b,
+.post date {
+	color: #fff;
+	padding: 0.5em 1em;
+	position: absolute;
+	text-shadow: 0 0 0.5em #000;
+}
+.post b {
+	left: 0;
+	top: 0;
+}
+.post date {
+	bottom: 0;
+	padding: 0.5em 1em;
+	position: absolute;
+	right: 0;
+}
+.post a:hover b {
+	text-shadow: 0 0 0.5em #fff;
+}
+.post .desc {
+	line-height: 120%;
+	margin-top: 0;
+}
