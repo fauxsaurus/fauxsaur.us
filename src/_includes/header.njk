@@ -1,0 +1,13 @@
+<header class="row">
+	<a class="accessible-txt" href="#main">Skip To Content</a>
+	<a href="{{ page.lang | absoluteUrl(site.url) }}/">Minifyre</a>
+	<nav class="row">
+		<!--
+		<a href="{{ page.lang | absoluteUrl(site.url) }}/{{ pages.blog }}/">{{ localization.blog | _kebab2titleCase }}</a>
+-->
+		<a href="{{ page.lang | absoluteUrl(site.url) }}/{{ localization.about }}/">{{
+			localization.about | _kebab2titleCase
+		}}</a>
+	</nav>
+	<div class="scroll-progress-bar" style="background-size: 0% 100%"></div>
+</header>
