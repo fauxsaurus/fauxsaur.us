@@ -3,6 +3,9 @@ const Image = require('@11ty/eleventy-img')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const sassPlugin = require('eleventy-sass')
 
+const markdownIt = require('markdown-it')
+const anchor = require('markdown-it-anchor')
+
 const path = require('node:path')
 
 module.exports = eleventyConfig => {
@@ -13,7 +16,11 @@ module.exports = eleventyConfig => {
 	/** @note {defaultLanguage: any valid BCP 47 tag} */
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {defaultLanguage: 'en-US'})
 	eleventyConfig.addPlugin(rssPlugin)
-	eleventyConfig.addPlugin(sassPlugin)
+	eleventyConfig.addPlugin(sassPlugin, [
+		{
+			sass: {style: 'compressed', sourceMap: true},
+		},
+	])
 
 	/** @note _prefix denotes that these are custom filters that should hopefully not interfere with others if newer filters are added with similar names */
 	/** @note this could cause issues if a person's hyphenated last name is ever used as a page name. */
@@ -77,6 +84,12 @@ module.exports = eleventyConfig => {
 	)
 
 	eleventyConfig.setLayoutResolution(false)
+
+	const markdownLibrary = markdownIt({html: true, breaks: true, linkify: true})
+		.use(anchor, {permalink: anchor.permalink.headerLink()})
+
+	eleventyConfig.setLibrary('md', markdownLibrary)
+
 	return {
 		dir: {input: 'src', output: 'build'},
 		markdownTemplateEngine: 'njk',

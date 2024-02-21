@@ -15,6 +15,19 @@
 	padding: 1rem;
 }
 
+@for $i from 1 through 6 {
+	h#{7 - $i}[id]:hover a[href^='#'] {
+		position: relative;
+
+		&::before {
+			content: '#';
+			position: absolute;
+			left: -0.8em;
+			text-decoration: underline;
+		}
+	}
+}
+
 .post div {
 	position: relative;
 }
