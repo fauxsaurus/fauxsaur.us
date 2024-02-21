@@ -1,3 +1,4 @@
+const {EleventyI18nPlugin} = require('@11ty/eleventy')
 const Image = require('@11ty/eleventy-img')
 const path = require('node:path')
 
@@ -6,6 +7,8 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy('src/js/*.js')
 	eleventyConfig.addPassthroughCopy('src/font/*.ttf')
 
+	/** @note {defaultLanguage: any valid BCP 47 tag} */
+	eleventyConfig.addPlugin(EleventyI18nPlugin, {defaultLanguage: 'en-US'})
 	/** @note _prefix denotes that these are custom filters that should hopefully not interfere with others if newer filters are added with similar names */
 	/** @note this could cause issues if a person's hyphenated last name is ever used as a page name. */
 	eleventyConfig.addFilter('_kebab2titleCase', function (string) {
@@ -22,6 +25,10 @@ module.exports = eleventyConfig => {
 		const [yyyy, mm, dd] = date.toISOString().split('T')[0].split('-')
 		return ['', lang, word4blog, yyyy, mm, dd, slug, 'index.html'].join('/')
 	})
+
+	eleventyConfig.addFilter('_getLangPosts', (collection, lang) =>
+		collection.filter(post => post.data.lang == lang)
+	)
 
 	eleventyConfig.addFilter('_getShareImgUrl', (absoluteUrl, imgSize = 0) => {
 		if (absoluteUrl.match(/undefined$/) || !imgSize) return ''

@@ -1,19 +1,15 @@
 ---
-author: Andrew R Quinn
-categories: en blog
 desc: "RWBY is not full of fetishized fanservice (though the camera could have aimed a little higher in the final trailer's opening). Instead, it features a colorful cast of characters in a unique world that seamlessly blends elements of sci-fi & fantasy with modernity. Also, the fight scenes, weapons, and music are amazing."
 img: ./img/rwby-trailers.jpg
-lang: en
-layout: post
-tags: analysis RWBY movies/tv
+imgAlt: 'RWBY Reveal Trailers'
+imgSize: 800
+tags: [post, analysis, RWBY, movies/tv]
 title: "Learning from RWBY's Trailers: Analysis, Review, Critique, and Commentary"
-type: article
 ---
 
-{:.fine-print}
-**Satirical Warning:** The following contains ~~spoilers and~~ opinions.
+{% finePrint "**Satirical Warning:** The following contains ~~spoilers and~~ opinions." %}
 
-{% include img.html url="/img/rwby-trailers.jpg" description="RWBY Reveal Trailers" %}
+{% image "/img/rwby-trailers.jpg", "RWBY Reveal Trailers" %}
 
 RWBY is not full of fetishized fanservice (though the camera could have aimed a little higher in the final trailer's opening). Instead, it features a colorful cast of characters in a unique world that seamlessly blends elements of sci-fi & fantasy with modernity. Also, the fight scenes, weapons, and music are amazing.
 
@@ -21,7 +17,7 @@ RWBY is not full of fetishized fanservice (though the camera could have aimed a 
 
 The music in each trailer sounds great on its own, but when paired with the visuals, each song helps inform the rhythm & phases of each fight. Additionally, each track sets a unique tone that perfectly reflects every character's personality. I particularly enjoyed, the vocals and accompanying instruments in the first two compositions. And as someone who doesn't usually enjoy Spanish guitars, that should speak volumes. I also thought it was clever how the second trailer linked the music in with the on screen recital.
 
-{% include img.html url="/img/rwby-white-trailer-wiess-singing.jpg" description="Wiess singing the actual background music." %}
+{% image "/img/rwby-white-trailer-wiess-singing.jpg", "Wiess singing the actual background music." %}
 
 And while I wasn't as big of a fan of the third song, the final trailer did an exceptional job of remixing the previous three together in a manner befitting a dance club. All in all, each song was custom tailored to each trailer and well integrated with the imagery on screen.
 
@@ -33,7 +29,7 @@ The weapons also had a surprising amount of depth. And their many forms and mode
 
 The giant gun scythe in the first trailer folds: up for travel, into a sniper rifle, and, well, a scythe. Rather than these simply being different standalone forms, the blade and the gun aspects have quite a bit of synergy with one another. For instance, the blade acts as a stand while firing and the recoil has enough force to speed up a swing and decapitate opponents. It even enhances mobility by speeding up dashes via recoil and reducing momentum with the blade after getting knocked back. Plus, it can take different types of ammo.
 
-{% include img.html url="/img/rwby-red-trailer-ruby's-scythe-in-action.jpg" description="Ruby's giant scythe in action." %}
+{% image "/img/rwby-red-trailer-ruby's-scythe-in-action.jpg", "Ruby's giant scythe in action." %}
 
 ### White Trailer
 
@@ -47,7 +43,7 @@ But Blake's weapon is even more complex in that it acts as: a cleaver while shea
 
 ### Yellow Trailer
 
-{% include img.html url="/img/rwby-yellow-trailer-yang's-gun-gauntlets.jpg" description="Yang's shotgun gauntlets." %}
+{% image "/img/rwby-yellow-trailer-yang's-gun-gauntlets.jpg", "Yang's shotgun gauntlets." %}
 
 Finally, the fourth trailer shows Yang's bracelets unfolding to form shotgun gauntlets that amplify the force of her punches & throws in addition to improving her jump & dash. Her opponent, Junior, has a rocket launcher that turns into a bat, though it's not quite as durable. And the twins' claws & spiked heels are more of a novelty. All in all, these weapons are pretty cool and some bits even look like they came straight out of a 2D fighter.
 
@@ -61,7 +57,7 @@ Speaking of which, the bright colors and art style both take quite a bit of infl
 
 Plus, everyone has a strong, unique color scheme that prevents them from getting lost amidst the chaos on screen. Every trailer features a fair amount of red, black, and white, but the White trailer drops most of the red which the Black trailer ironically picks up.
 
-{% include img.html url="/img/rwby-black-trailer.jpg" description="RWBY's Black Trailer utilizes a large amount of red." %}
+{% image "/img/rwby-black-trailer.jpg", "RWBY's Black Trailer utilizes a large amount of red." %}
 
 Though to be fair, this use of red does help accentuate the characters' black and white clothing a bit better. The first two trailers also have a fair bit of snow, which the second trailer puts on full display with the palette, iconography, flooring, and skating parts. And despite its namesake, the Yellow trailer doesn't feature much yellow, save for the motorcycle and Yang herself, which only further serves to shine the spotlight on her.
 
@@ -81,7 +77,7 @@ Unfortunately, some of the voice acting falls a bit flat, but I suppose that's t
 
 Also, the moon in the first trailer is whole, a bit cracked in the second, and quite destroyed in the third and fourth ones. Though the second sphere in the fourth trailer calls this into question. And without more context, it's impossible to know if it is the sun, another moon, or simply a mistake.
 
-{% include img.html url="/img/rwby-moonslice.jpg" description="RWBY's cracked moon in the Black Trailer." %}
+{% image "/img/rwby-moonslice.jpg", "RWBY's cracked moon in the Black Trailer." %}
 
 ### Eras
 
@@ -91,10 +87,10 @@ Aside from the moon, there's also a nice bit of evolution of elements from diffe
 
 To say these trailers were unconventional would be an understatement. They all contain unique footage and give few hints as to what's to come. Given their standalone nature, it may be more accurate to call them shorts, which I think is better in the long run as they don't lose their relevance after the first season. And while they didn't reveal much about the characters,
 
-- Ruby is Yang's sister (despite looking nothing like her).
-- Weiss is probably from a higher class.
-- Blake is a criminal who wants no part in a plan that would endanger others.
-- Yang is looking for someone, possibly Blake given the image ([actual image](https://www.deviantart.com/montyoum/art/Transient-Princess-136525544){:target="\_blank"}) and is a bit more "mature".
+-   Ruby is Yang's sister (despite looking nothing like her).
+-   Weiss is probably from a higher class.
+-   Blake is a criminal who wants no part in a plan that would endanger others.
+-   Yang is looking for someone, possibly Blake given the image ([actual image](https://www.deviantart.com/montyoum/art/Transient-Princess-136525544){:target="\_blank"}) and is a bit more "mature".
 
 these trailers showcased the unique world and the talents of the cast & crew which made me interested to see what's next on a technical level. And the fact that such disparate elements like guns and blades complimented each other so well, shows that a lot of care and planning went into this, and that everything was well thought out. That attention to detail hints at a greater vision behind everything, which makes me eager to see where things go from here.
 
@@ -112,7 +108,7 @@ The 2D portrait faces in the end cards look a bit off and don't seem quite on mo
 
 ### Similarities to Metal Gear Rising's Jetstream Sam
 
-{% include img.html url="/img/rwby-adam-tarus-vs-mgr-jetsream-sam.jpg" description="The Black Trailer's masked man and Metal Gear Rising's Jetstream Sam." %}
+{% image "/img/rwby-adam-tarus-vs-mgr-jetsream-sam.jpg", "The Black Trailer's masked man and Metal Gear Rising's Jetstream Sam." %}
 
 The masked man in the third trailer bears a striking resemblance to Metal Gear Rising's Jetstream Sam: samurai-like draw strikes, red sword that was previously gray in earlier versions of the trailer (can't find this image/clip), and trigger-based blade launching scabbard (though the masked man's sheath goes even farther by serving as a standalone gun which is pretty neat).
 
@@ -123,10 +119,10 @@ To be clear these [similarities](https://i.imgur.com/RfCRYvt.png){:target="\_bla
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">1. I made Adam&#39;s sword well before I ever saw MGR&#39;s Jetstream Sam. <br><br>2. He got his sword from Kagura from Ga Rei Zero.<br><br>3: :P</p>&mdash; Monty Oum (@montyoum) <a href="https://twitter.com/montyoum/status/315342093893648385?ref_src=twsrc%5Etfw">March 23, 2013</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {%endraw%}
 
-- June 1, 2009 [E3 Teaser Trailer](https://www.youtube.com/watch?v=hgD2itu2uL8){:target="\_blank"} (no gameplay)
-- June 14, 2010 [E3 Trailer](https://www.youtube.com/watch?v=5u_0GIC9C0E){:target="\_blank"} (no hint of Sam)
-- December 10, 2011 [VGA Trailer](https://www.youtube.com/watch?v=5SNo8h-KfAU){:target="\_blank"} (Sam debuts)
-- June 6, 2012 [E3 Trailer](https://www.youtube.com/watch?v=2ONT6-8B94Y){:target="\_blank"} (Sam's sword is now red)
-- February 19, 2013 MGR Releases (showcases a quick draw launch)
-- **March 3, 2013 Black Trailer Drops (showcases gun launching & standalone gun)**
-- April 9, 2013 MGR Jetstream DLC (takes full advantage of shooting the sword, but sheath does not act as a standalone gun)
+-   June 1, 2009 [E3 Teaser Trailer](https://www.youtube.com/watch?v=hgD2itu2uL8){:target="\_blank"} (no gameplay)
+-   June 14, 2010 [E3 Trailer](https://www.youtube.com/watch?v=5u_0GIC9C0E){:target="\_blank"} (no hint of Sam)
+-   December 10, 2011 [VGA Trailer](https://www.youtube.com/watch?v=5SNo8h-KfAU){:target="\_blank"} (Sam debuts)
+-   June 6, 2012 [E3 Trailer](https://www.youtube.com/watch?v=2ONT6-8B94Y){:target="\_blank"} (Sam's sword is now red)
+-   February 19, 2013 MGR Releases (showcases a quick draw launch)
+-   **March 3, 2013 Black Trailer Drops (showcases gun launching & standalone gun)**
+-   April 9, 2013 MGR Jetstream DLC (takes full advantage of shooting the sword, but sheath does not act as a standalone gun)
