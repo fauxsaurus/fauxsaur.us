@@ -1,3 +1,6 @@
+const Image = require('@11ty/eleventy-img')
+const path = require('node:path')
+
 module.exports = eleventyConfig => {
 	/** @todo concat if multiple scripts */
 	eleventyConfig.addPassthroughCopy('src/js/*.js')
@@ -20,6 +23,16 @@ module.exports = eleventyConfig => {
 		return ['', lang, word4blog, yyyy, mm, dd, slug, 'index.html'].join('/')
 	})
 
+	eleventyConfig.addFilter('_getShareImgUrl', (absoluteUrl, imgSize = 0) => {
+		if (absoluteUrl.match(/undefined$/) || !imgSize) return ''
+
+		const [ext, ...path] = absoluteUrl.split('.').reverse()
+		/** @note necessary because [`.jpg`s become `.jpeg`s...](https://github.com/11ty/eleventy-img/issues/64) */
+		const fixedExt = ext === 'jpg' ? 'jpeg' : ext
+
+		return `${path.reverse().join('.')}-${imgSize}.${fixedExt}`
+	})
+
 	eleventyConfig.addNunjucksShortcode(
 		'finePrint',
 		/** @note the slice is to remove redundant paragraph tags */
@@ -27,6 +40,28 @@ module.exports = eleventyConfig => {
 			`<p class="fine-print">${markdownIt({html: true}).render(content).slice(3, -5)}</p>`
 	)
 
+	eleventyConfig.addShortcode(
+		'image',
+		async (filePath, alt, sizes = '(min-width: 800px) 50vw, 100vw') => {
+			const metadata = await Image(path.join(eleventyConfig.dir.input, filePath), {
+				widths: [400, 800, 1600],
+				formats: filePath.match(/png$/) ? ['png'] : ['avif', 'svg', 'jpg'],
+				outputDir: './build/img/',
+				urlPath: '/img/',
+				svgShortCiruit: 'size',
+				// svgCompressionSize: "br",
+
+				filenameFormat: function (_id, src, width, format, _options) {
+					const extension = path.extname(src)
+					const name = path.basename(src, extension)
+
+					return `${name}-${width}.${format}`
+				},
+			})
+
+			return Image.generateHTML(metadata, {alt, sizes, loading: 'eager', decoding: 'async'})
+		}
+	)
 
 	eleventyConfig.setLayoutResolution(false)
 	return {
