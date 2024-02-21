@@ -5,6 +5,7 @@ const sassPlugin = require('eleventy-sass')
 
 const markdownIt = require('markdown-it')
 const anchor = require('markdown-it-anchor')
+const mdIterator = require('markdown-it-for-inline')
 
 const path = require('node:path')
 
@@ -87,6 +88,12 @@ module.exports = eleventyConfig => {
 
 	const markdownLibrary = markdownIt({html: true, breaks: true, linkify: true})
 		.use(anchor, {permalink: anchor.permalink.headerLink()})
+		.use(mdIterator, 'url_new_win', 'link_open', (tokens, idx) => {
+			const [_attrName, href] = tokens[idx].attrs.find(attr => attr[0] === 'href')
+			if (!href || href.includes('minify.re') || href.match(/^[\/#]/)) return
+
+			tokens[idx].attrPush(['target', '_blank'])
+		})
 
 	eleventyConfig.setLibrary('md', markdownLibrary)
 
