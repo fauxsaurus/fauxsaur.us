@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+	<h1 itemprop="name headline" id="{{ title | slugify }}">
+		<a href="#{{ title | slugify }}">{{ title }}</a>
+	</h1>
+	<time datetime="{{ page.date | dateToRfc3339 }}" itemprop="datePublished">
+		{{ page.date.toLocaleDateString(page.lang,
+			year = 'numeric', 
+			month = 'long', 
+			day = 'numeric'
+		  )
+		}}</time
+	>
+	<div itemprop="articleBody">{{ content | safe }}</div>
+	<ul class="tags">
+		{% for tag in page.tags %}
+		<li class="tag">
+			<a href="{{ site.url }}/{{ page.lang }}/search.html?tag={{ tag | xml_escape }}">{{
+				tag | xml_escape
+			}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</article>
+<aside>
+	<p class="fine-print">
+		Found a spelling/grammar mistake or want to help translate this article? Let us know
+		<a href="{{ social[0].url }}/minifyre.github.io/blob/master/{{ page.path }}">here</a>!
+	</p>
+</aside>

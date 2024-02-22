@@ -1,0 +1,39 @@
+---js
+{
+	eleventyExcludeFromCollections: true,
+	permalink: data => `/${data.lang}/feed.xml`,
+	metadata: {
+		"title": "Minifyre Blog",
+		"subtitle": "Short stories, media analysis, tech writeups, and more!",
+		"author": {
+			"name": "Andrew R. H. Quinn"
+		}
+	}
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
+	<title>{{ metadata.title }}</title>
+	<subtitle>{{ metadata.subtitle }}</subtitle>
+	<link href="{{page.url | absoluteUrl(site.url) }}" rel="self" />
+	<link href="{{ site.url }}" />
+	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ site.url }}</id>
+	<author>
+		<name>{{ metadata.author.name }}</name>
+	</author>
+	{%- for post in collections.post | reverse %} {%- set absolutePostUrl = post.url |
+	absoluteUrl(site.url) %}
+	{% if page.lang.includes(post.data.lang) %}
+	<entry>
+		<id>{{ absolutePostUrl }}</id>
+		<title>{{ post.data.title }}</title>
+		<link href="{{ absolutePostUrl }}" />
+		<updated>{{ post.date | dateToRfc3339 }}</updated>
+		<summary xml:lang="{{ page.lang }}" type="html">
+			{{- post.data.desc | htmlToAbsoluteUrls(absolutePostUrl) -}}
+		</summary>
+	</entry>
+	{% endif %}
+	{%- endfor %}
+</feed>

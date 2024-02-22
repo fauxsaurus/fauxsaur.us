@@ -1,0 +1,8 @@
+[
+	{"name": "github", "url": "https://github.com/minifyre"},
+	{"name": "patreon", "url": "https://www.patreon.com/minifyre"},
+	{"name": "pinterest", "url": "https://www.pinterest.com/minifyre"},
+	{"name": "rss", "url": "dynamically calculated in footer"},
+	{"name": "twitter", "url": "https://twitter.com/minifyres"},
+	{"name": "youtube", "url": "https://www.youtube.com/@minifyre"}
+]
