@@ -1,0 +1,3 @@
+---
+layout: lang-redirect.njk
+---
