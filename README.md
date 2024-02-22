@@ -1,1 +1,1 @@
-# minifyre.com
+# minify.re

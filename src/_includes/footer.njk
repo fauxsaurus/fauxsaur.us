@@ -1,0 +1,12 @@
+<footer class="col">
+	<nav class="row">
+		{% set feedUrl = site.url + '/' + page.lang + '/feed.xml' %} {% for link in social -%} {%
+		set href = feedUrl if link.name === 'rss' else link.url%}
+		<a data-icon="{{ link.name }}" href="{{ href }}" target="_blank"> {{ link.name }}</a>
+		{%- endfor %}
+	</nav>
+	<span class="fine-print row">
+		Copyright &copy; 2018-{{ page.date.getFullYear() }} {{ site.title }} All rights reserved.
+	</span>
+</footer>
+<script src="/js/scroll-progress-bar.js"></script>

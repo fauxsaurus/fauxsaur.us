@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+
+<h1>Site Under Construction</h1>
+<p>Thank you for the interest! But fair warning, not everything is working quite yet!</p>
+
+<ul class="posts">
+	{% for post in (collections.post | _getLangPosts(page.lang)) .reverse().slice(0, 13) %}
+	<li class="{%if forloop.index == 1 %}col-sm-12{%else%}col-sm-6 col-md-4{%endif%} post">
+		<a href="{{ post.url }}">
+			<div>
+				{% image post.data.img, post.data.imgAlt %}
+				<b>{{ post.data.title }}</b>
+				<date>{{ post.date.toLocaleDateString(page.lang,
+					year = 'numeric', 
+					month = 'long', 
+					day = 'numeric'
+				  )
+				}}</date>
+			</div>
+		</a>
+		<p class="desc">{{ post.data.desc }}</p>
+		{% for tag in post.data.tags -%} {% if tag !== 'post' %}
+		<a class="tag" href="{{ site.url }}/{{ page.lang }}/search.html?tag={{ tag }}">{{ tag }}</a>
+		{% endif %} {%- endfor %}
+	</li>
+	{% endfor %}
+</ul>
