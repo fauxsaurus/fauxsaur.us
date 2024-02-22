@@ -12,20 +12,21 @@ const path = require('node:path')
 
 const outputDir = 'build'
 
-module.exports = eleventyConfig => {
+module.exports = config => {
 	/** @todo concat if multiple scripts */
-	eleventyConfig.addPassthroughCopy('src/js/*.js')
-	eleventyConfig.addPassthroughCopy('src/font/*.ttf')
+	config.addPassthroughCopy('src/js/*.js')
+	config.addPassthroughCopy('src/font/*.ttf')
+	config.addPassthroughCopy('src/CNAME')
 
 	/** @note {defaultLanguage: any valid BCP 47 tag} */
-	eleventyConfig.addPlugin(EleventyI18nPlugin, {defaultLanguage: 'en-US'})
-	eleventyConfig.addPlugin(faviconsPlugin, {outputDir, manifestData: {name: 'Minifyre'}})
-	eleventyConfig.addPlugin(rssPlugin)
-	eleventyConfig.addPlugin(sassPlugin, [{sass: {style: 'compressed', sourceMap: true}}])
+	config.addPlugin(EleventyI18nPlugin, {defaultLanguage: 'en-US'})
+	config.addPlugin(faviconsPlugin, {outputDir, manifestData: {name: 'Minifyre'}})
+	config.addPlugin(rssPlugin)
+	config.addPlugin(sassPlugin, [{sass: {style: 'compressed', sourceMap: true}}])
 
 	/** @note _prefix denotes that these are custom filters that should hopefully not interfere with others if newer filters are added with similar names */
 	/** @note this could cause issues if a person's hyphenated last name is ever used as a page name. */
-	eleventyConfig.addFilter('_kebab2titleCase', function (string) {
+	config.addFilter('_kebab2titleCase', function (string) {
 		return string
 			.split('-')
 			.map(
@@ -35,16 +36,16 @@ module.exports = eleventyConfig => {
 			.join(' ')
 	})
 
-	eleventyConfig.addFilter('_post2permalink', ([lang, word4blog, date, slug]) => {
+	config.addFilter('_post2permalink', ([lang, word4blog, date, slug]) => {
 		const [yyyy, mm, dd] = date.toISOString().split('T')[0].split('-')
 		return ['', lang, word4blog, yyyy, mm, dd, slug, 'index.html'].join('/')
 	})
 
-	eleventyConfig.addFilter('_getLangPosts', (collection, lang) =>
+	config.addFilter('_getLangPosts', (collection, lang) =>
 		collection.filter(post => post.data.lang == lang)
 	)
 
-	eleventyConfig.addFilter('_getShareImgUrl', (absoluteUrl, imgSize = 0) => {
+	config.addFilter('_getShareImgUrl', (absoluteUrl, imgSize = 0) => {
 		if (absoluteUrl.match(/undefined$/) || !imgSize) return ''
 
 		const [ext, ...path] = absoluteUrl.split('.').reverse()
@@ -54,17 +55,17 @@ module.exports = eleventyConfig => {
 		return `${path.reverse().join('.')}-${imgSize}.${fixedExt}`
 	})
 
-	eleventyConfig.addNunjucksShortcode(
+	config.addNunjucksShortcode(
 		'finePrint',
 		/** @note the slice is to remove redundant paragraph tags */
 		content =>
 			`<p class="fine-print">${markdownIt({html: true}).render(content).slice(3, -5)}</p>`
 	)
 
-	eleventyConfig.addShortcode(
+	config.addShortcode(
 		'image',
 		async (filePath, alt, sizes = '(min-width: 800px) 50vw, 100vw') => {
-			const metadata = await Image(path.join(eleventyConfig.dir.input, filePath), {
+			const metadata = await Image(path.join(config.dir.input, filePath), {
 				widths: [400, 800, 1600],
 				formats: filePath.match(/png$/) ? ['png'] : ['avif', 'svg', 'jpg'],
 				outputDir: './build/img/',
@@ -83,7 +84,7 @@ module.exports = eleventyConfig => {
 		}
 	)
 
-	eleventyConfig.setLayoutResolution(false)
+	config.setLayoutResolution(false)
 
 	const markdownLibrary = markdownIt({html: true, breaks: true, linkify: true})
 		.use(anchor, {permalink: anchor.permalink.headerLink()})
@@ -94,7 +95,7 @@ module.exports = eleventyConfig => {
 			tokens[idx].attrPush(['target', '_blank'])
 		})
 
-	eleventyConfig.setLibrary('md', markdownLibrary)
+	config.setLibrary('md', markdownLibrary)
 
 	return {
 		dir: {input: 'src', output: outputDir},
