@@ -2,8 +2,8 @@
 	"name": "minifyre.github.io",
 	"version": "1.0.0",
 	"description": "The minify.re website.",
-	"main": "index.js",
 	"scripts": {
+		"build": "MY_ENVIRONMENT=production npx @11ty/eleventy",
 		"dev": "npx @11ty/eleventy --serve",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
