@@ -16,7 +16,7 @@ module.exports = config => {
 	/** @todo concat if multiple scripts */
 	config.addPassthroughCopy('src/js/*.js')
 	config.addPassthroughCopy('src/font/*.ttf')
-	config.addPassthroughCopy('src/CNAME')
+	config.addPassthroughCopy('CNAME')
 
 	/** @note {defaultLanguage: any valid BCP 47 tag} */
 	config.addPlugin(EleventyI18nPlugin, {defaultLanguage: 'en-US'})
