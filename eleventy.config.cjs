@@ -1,5 +1,6 @@
 const {EleventyI18nPlugin} = require('@11ty/eleventy')
 const Image = require('@11ty/eleventy-img')
+const faviconsPlugin = require('eleventy-plugin-gen-favicons')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const sassPlugin = require('eleventy-sass')
 
@@ -9,6 +10,8 @@ const mdIterator = require('markdown-it-for-inline')
 
 const path = require('node:path')
 
+const outputDir = 'build'
+
 module.exports = eleventyConfig => {
 	/** @todo concat if multiple scripts */
 	eleventyConfig.addPassthroughCopy('src/js/*.js')
@@ -16,12 +19,9 @@ module.exports = eleventyConfig => {
 
 	/** @note {defaultLanguage: any valid BCP 47 tag} */
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {defaultLanguage: 'en-US'})
+	eleventyConfig.addPlugin(faviconsPlugin, {outputDir, manifestData: {name: 'Minifyre'}})
 	eleventyConfig.addPlugin(rssPlugin)
-	eleventyConfig.addPlugin(sassPlugin, [
-		{
-			sass: {style: 'compressed', sourceMap: true},
-		},
-	])
+	eleventyConfig.addPlugin(sassPlugin, [{sass: {style: 'compressed', sourceMap: true}}])
 
 	/** @note _prefix denotes that these are custom filters that should hopefully not interfere with others if newer filters are added with similar names */
 	/** @note this could cause issues if a person's hyphenated last name is ever used as a page name. */
@@ -69,7 +69,6 @@ module.exports = eleventyConfig => {
 				formats: filePath.match(/png$/) ? ['png'] : ['avif', 'svg', 'jpg'],
 				outputDir: './build/img/',
 				urlPath: '/img/',
-				svgShortCiruit: 'size',
 				// svgCompressionSize: "br",
 
 				filenameFormat: function (_id, src, width, format, _options) {
@@ -98,7 +97,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.setLibrary('md', markdownLibrary)
 
 	return {
-		dir: {input: 'src', output: 'build'},
+		dir: {input: 'src', output: outputDir},
 		markdownTemplateEngine: 'njk',
 	}
 }
