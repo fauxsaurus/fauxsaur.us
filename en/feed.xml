@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://minify.re">
+	<title>Minifyre Blog</title>
+	<subtitle>Short stories, media analysis, tech writeups, and more!</subtitle>
+	<link href="https://minify.re/en/feed.xml" rel="self" />
+	<link href="https://minify.re" />
+	<updated>2024-02-22T15:45:11Z</updated>
+	<id>https://minify.re</id>
+	<author>
+		<name>Andrew R. H. Quinn</name>
+	</author>
+	
+	<entry>
+		<id>https://minify.re/en/blog/2019/03/02/learning-from-rwby-trailers/</id>
+		<title>Learning from RWBY&#39;s Trailers: Analysis, Review, Critique, and Commentary</title>
+		<link href="https://minify.re/en/blog/2019/03/02/learning-from-rwby-trailers/" />
+		<updated>2019-03-02T00:00:00Z</updated>
+		<summary xml:lang="en" type="html">RWBY is not full of fetishized fanservice (though the camera could have aimed a little higher in the final trailer&#39;s opening). Instead, it features a colorful cast of characters in a unique world that seamlessly blends elements of sci-fi &amp; fantasy with modernity. Also, the fight scenes, weapons, and music are amazing.</summary>
+	</entry>
+	
+	
+	<entry>
+		<id>https://minify.re/en/blog/2019/03/01/simplifying-your-wardrobe/</id>
+		<title>Simplifying Your Wardrobe</title>
+		<link href="https://minify.re/en/blog/2019/03/01/simplifying-your-wardrobe/" />
+		<updated>2019-03-01T00:00:00Z</updated>
+		<summary xml:lang="en" type="html">Here are a few tips and tricks that helped me slim down my wardrobe.</summary>
+	</entry>
+	
+</feed>
