@@ -2,6 +2,5 @@
 	{"name": "github", "url": "https://github.com/fauxsaurus"},
 	{"name": "pinterest", "url": "https://www.pinterest.com/fauxsaurus"},
 	{"name": "rss", "url": "dynamically calculated in footer"},
-	{"name": "twitter", "url": "https://twitter.com/fauxsaur_us"},
-	{"name": "youtube", "url": "https://www.youtube.com/@fauxsaurus"}
+	{"name": "twitter", "url": "https://twitter.com/fauxsaur_us"}
 ]
