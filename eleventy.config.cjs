@@ -97,6 +97,12 @@ module.exports = config => {
 
 	config.setLibrary('md', markdownLibrary)
 
+	/** @note for WSL dev serv watch per https://www.11ty.dev/docs/watch-serve/#advanced-chokidar-configuration */
+	config.setChokidarConfig({
+		usePolling: true,
+		interval: 500,
+	})
+
 	return {
 		dir: {input: 'src', output: outputDir},
 		markdownTemplateEngine: 'njk',
