@@ -1,7 +1,7 @@
 ---
 layout: home.njk
 tags: []
-title: Minifyre
+title: Fauxsaurus
 type: website
 order: 1
 ---

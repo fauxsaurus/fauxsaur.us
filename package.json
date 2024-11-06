@@ -1,7 +1,7 @@
 {
-	"name": "minifyre.github.io",
+	"name": "fauxsaur.us",
 	"version": "1.0.0",
-	"description": "The minify.re website.",
+	"description": "The fauxsaur.us website.",
 	"scripts": {
 		"build": "MY_ENVIRONMENT=production npx @11ty/eleventy",
 		"dev": "npx @11ty/eleventy --serve",
