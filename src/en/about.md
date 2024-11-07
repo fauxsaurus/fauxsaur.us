@@ -4,16 +4,6 @@ tags: []
 title: About
 ---
 
-# Our Mission
+# Andrew R. H. Quinn
 
-We are dedicated to creating things that inspire & empower others.
-
-## Our Team
-
--   Andrew Quinn
-    -   Minifyre- President
-    -   Bloque It- Lead Designer & Programmer
--   Joshua DeRousse
-    -   Bloque It- Level Designer
--   Nathan DeRousse
-    -   Bloque It- Level Designer
+Andrew R. H. Quinn was born in Missouri, grew up in Illinois, and now resides in Indiana with his wife and their dog. (Who, by sheer coincidence, is named Andy.)
