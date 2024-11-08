@@ -20,7 +20,7 @@ module.exports = config => {
 
 	/** @note {defaultLanguage: any valid BCP 47 tag} */
 	config.addPlugin(EleventyI18nPlugin, {defaultLanguage: 'en-US'})
-	config.addPlugin(faviconsPlugin, {outputDir, manifestData: {name: 'Minifyre'}})
+	config.addPlugin(faviconsPlugin, {outputDir, manifestData: {name: 'Fauxsaurus'}})
 	config.addPlugin(rssPlugin)
 	config.addPlugin(sassPlugin, [{sass: {style: 'compressed', sourceMap: true}}])
 
