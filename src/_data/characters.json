@@ -1,0 +1,209 @@
+[
+	{
+		"name": "Olivia L. Wade",
+		"image": "img/test.png",
+		"group": "Wade Family",
+		"description": "Olivia is a first-year student at Salem High School interested in art and chemistry."
+	},
+	{
+		"name": "Ada A. Wade",
+		"image": "img/test.png",
+		"group": "Wade Family",
+		"description": "Ada is a freelance web developer who enjoys spending time with her daughter, Olivia, and reading poetry in her spare time."
+	},
+	{
+		"name": "William Wade",
+		"image": "img/test.png",
+		"group": "Wade Family",
+		"description": "Will currently works as a long-haul trucker delivering supplies to remote communities in Canada with a fondness for old-timey sci-fi novels."
+	},
+	{
+		"name": "Sister Paula",
+		"image": "img/test.png",
+		"group": "Wade Family",
+		"description": "Sister Paula is a nun who helped care for Ada after she lost her sight and has been a close family friend ever since."
+	},
+
+	{
+		"name": "Detective Kurstin Wagner",
+		"image": "img/test.png",
+		"group": "Detroit Police Department",
+		"description": "Kurstin is a homicide detective who is used to working long nights and unwinding by playing video games."
+	},
+	{
+		"name": "Detective Saul Omen",
+		"image": "img/test.png",
+		"group": "Detroit Police Department",
+		"description": "Saul is a gruff detective with a bit of a gambling problem and a far more dubious reputation than his partner, Kurstin."
+	},
+	{
+		"name": "Detective Jada Johansen",
+		"image": "img/test.png",
+		"group": "Detroit Police Department",
+		"description": "Jada, Kurstin's best friend, is an outgoing detective in Vice who is obsessed with spy flicks, perfecting disguises, and hacking."
+	},
+	{
+		"name": "Dr. Sung-Min Park",
+		"image": "img/test.png",
+		"group": "Detroit Police Department",
+		"description": "Dr. Park is a child psychiatrist at Hawthron Center, currently assisting the department on a particularly tough case."
+	},
+
+	{
+		"name": "Jasmine Jackson",
+		"image": "img/test.png",
+		"group": "Friends or Foes?",
+		"description": "As Plymouth's star player, Jasmine likes basketball and enjoys spending her free time standing up against bullies."
+	},
+	{
+		"name": "Devin Dieterich",
+		"image": "img/test.png",
+		"group": "Friends or Foes?",
+		"description": "Devin is a jerk who seems to enjoy tormenting Olivia and little else."
+	},
+	{
+		"name": "Vigil Lee",
+		"image": "img/test.png",
+		"group": "Friends or Foes?",
+		"description": "Despite his scrawny frame, Vigil was caught red-handed at the scene of a brutal crime and thus far remains unresponsive to questioning."
+	},
+	{
+		"name": "Rafe Ramírez",
+		"image": "img/test.png",
+		"group": "Friends or Foes?",
+		"description": "Rafe is a medical student wise beyond his years who occasionally sings and dances."
+	},
+
+	{
+		"name": "Cisco",
+		"image": "img/test.png",
+		"group": "Animals",
+		"description": "Cisco is an aged golden retriever that grew up alongside Olivia and served as a guide dog for Ada for many years."
+	},
+	{
+		"name": "Nondescript Ravens",
+		"image": "img/test.png",
+		"group": "Animals",
+		"description": "These living Halloween decorations like to lend their presence to the creepy atmosphere and keep an eye on things from above."
+	},
+	{
+		"name": "Siguard",
+		"image": "img/test.png",
+		"group": "Animals",
+		"description": "Sigurd is a friendly neighborhood dog with a fondness for Olivia and, more importantly, whatever she feeds him in passing."
+	},
+	{
+		"name": "Lan",
+		"image": "img/test.png",
+		"group": "Animals",
+		"description": "Lan is a German shepherd puppy with big paws to fill who will take over Cisco's dog guide duties someday."
+	},
+	{
+		"name": "Erik \"Odin\" Odenkirk, Sr.",
+		"image": "img/test.png",
+		"group": "Berserkers",
+		"description": "The founder and president of the Berserkers Motorcycle Club prefers to keep a low profile and not much is known about him."
+	},
+	{
+		"name": "Anders \"Njord\" Berglin",
+		"image": "img/test.png",
+		"group": "Berserkers",
+		"description": "Serving as vice president, Anders is the public face of the club and likely kept in the dark about some of its activities to maintain his clean record."
+	},
+	{
+		"name": "Tyrian \"Tyr\" Hansen",
+		"image": "img/test.png",
+		"group": "Berserkers",
+		"description": "Tyrian serves as both the club's secretary and criminal defense attorney."
+	},
+	{
+		"name": "Richard \"Jotun\" Rice",
+		"image": "img/test.png",
+		"group": "Berserkers",
+		"description": "At six and a half feet tall, this sargent at arms commands the respect of his fellow riders and adversaries alike."
+	},
+	{
+		"name": "Erik \"Junior\" Odenkirk, Jr.",
+		"image": "img/test.png",
+		"group": "Berserkers",
+		"description": "Unlike many members, the president's son never served in the military and doesn't appear to do much else other than pushing papers as club treasurer."
+	},
+	{
+		"name": "Valerie \"Valkyrie\" Olsen",
+		"image": "img/test.png",
+		"group": "Berserkers",
+		"description": "As the club's designated road captain, and sole female member, Valerie has her work cut out for her when leading the group on rides."
+	},
+	{
+		"name": "Rupert \"Jerv\" Ratner",
+		"image": "img/test.png",
+		"group": "Berserkers",
+		"description": "This ill-tempered tail gunner served as a tunnel rat in Vietnam and appears to resent his fellow members for unknown reasons."
+	},
+	{
+		"name": "Felix \"Foxtrot\" Trah",
+		"image": "img/test.png",
+		"group": "Berserkers",
+		"description": "As Jotun's second in command, this lieutenant follows his boss wherever he goes like a lost puppy."
+	},
+	{
+		"name": "Wolfgang \"Wolf\" ????",
+		"image": "img/test.png",
+		"group": "Wild Hunt",
+		"description": "In his youth, Wolfgang once united the feuding factions of Hunters and Wilders after the split by breaking the Hitman's code upon completing his contract."
+	},
+	{
+		"name": "Bertholdt \"Bear\" Merigold",
+		"image": "img/test.png",
+		"group": "Wild Hunt",
+		"description": "As sergeant at arms, the eldest son of the Wolf keeps peace both inside and outside the club with a firm hand and calm temperament."
+	},
+	{
+		"name": "Casimir \"Cat\" Barring",
+		"image": "img/test.png",
+		"group": "Wild Hunt",
+		"description": "Other than the inability to speak, not much is known about the Wolf's middle child."
+	},
+	{
+		"name": "Griffin",
+		"image": "img/test.png",
+		"group": "Wild Hunt",
+		"description": "As treasurer, the youngest son of the Wolf appears to have been relegated to paperwork, much like his counterpart in the Berserker's Motorcycle Club."
+	},
+	{
+		"name": "Johnathan \"The Dragon\" Jaeger",
+		"image": "img/test.png",
+		"group": "Grimm Guard",
+		"description": "This chainsmoking president of the Grimm Guard has developed a fearsome reputation and is known for his firey temper and crooked smile."
+	},
+	{
+		"name": "Baxter \"The Beast\" Braun",
+		"image": "img/test.png",
+		"group": "Grimm Guard",
+		"description": "This chainsmoking president of the Grimm Guard has developed a fearsome reputation and is known for his firey temper and crooked smile."
+	},
+	{
+		"name": "Wendell \"The Wiccan\" Weiss",
+		"image": "img/test.png",
+		"group": "Grimm Guard",
+		"description": "Even before losing his legs, Wendell never let his dwarfism slow him down, and still shows no signs of stopping or outgrowing his lead foot tendencies."
+	},
+	{
+		"name": "Rudolph \"Wulf\" Wolfe",
+		"image": "img/test.png",
+		"group": "Grimm Guard",
+		"description": "Fueled by the mistaken belief that he can outrun his problems, this road captain often charges ahead without thinking."
+	},
+	{
+		"name": "????",
+		"image": "img/test.png",
+		"group": "Jesters",
+		"description": "Other than her accent, not much is known about this masked member of the destructive band."
+	},
+	{
+		"name": "Dora",
+		"image": "img/test.png",
+		"group": "Jesters",
+		"description": "Other than her accent, not much is known about this masked member of the destructive band."
+	}
+]
