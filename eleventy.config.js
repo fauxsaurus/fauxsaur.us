@@ -1,18 +1,19 @@
-const {EleventyI18nPlugin} = require('@11ty/eleventy')
-const Image = require('@11ty/eleventy-img')
-const faviconsPlugin = require('eleventy-plugin-gen-favicons')
-const rssPlugin = require('@11ty/eleventy-plugin-rss')
-const sassPlugin = require('eleventy-sass')
+import {EleventyI18nPlugin} from '@11ty/eleventy'
+import Image from '@11ty/eleventy-img'
+import faviconsPlugin from 'eleventy-plugin-gen-favicons'
+import rssPlugin from '@11ty/eleventy-plugin-rss'
+import sassPlugin from 'eleventy-sass'
 
-const markdownIt = require('markdown-it')
-const anchor = require('markdown-it-anchor')
-const mdIterator = require('markdown-it-for-inline')
+import markdownIt from 'markdown-it'
+import anchor from 'markdown-it-anchor'
+import mdIterator from 'markdown-it-for-inline'
+import markdownItFootnote from 'markdown-it-footnote'
 
-const path = require('node:path')
+import path from 'node:path'
 
 const outputDir = 'build'
 
-module.exports = config => {
+export default config => {
 	/** @todo concat if multiple scripts */
 	config.addPassthroughCopy('src/js/*.js')
 	config.addPassthroughCopy('src/font/*.ttf')
@@ -23,6 +24,16 @@ module.exports = config => {
 	config.addPlugin(faviconsPlugin, {outputDir, manifestData: {name: 'Fauxsaurus'}})
 	config.addPlugin(rssPlugin)
 	config.addPlugin(sassPlugin, [{sass: {style: 'compressed', sourceMap: true}}])
+
+	// sass too?
+	// config.setLibrary('scss', {
+	// 	compileOptions: {
+	// 		permalink: function (input, output) {
+	// 			console.log({input, output})
+	// 			return output
+	// 		},
+	// 	},
+	// })
 
 	/** @note _prefix denotes that these are custom filters that should hopefully not interfere with others if newer filters are added with similar names */
 	/** @note this could cause issues if a person's hyphenated last name is ever used as a page name. */
@@ -94,6 +105,7 @@ module.exports = config => {
 
 			tokens[idx].attrPush(['target', '_blank'])
 		})
+		.use(markdownItFootnote)
 
 	config.setLibrary('md', markdownLibrary)
 

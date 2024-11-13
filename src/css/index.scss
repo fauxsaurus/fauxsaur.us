@@ -1,9 +1,8 @@
 @charset "utf-8";
 
-@import '_reset';
-@import '_grid';
-@import '_home'; // @todo move this out to home only
-@import '_posts';
+@use '_reset';
+@use '_home'; // @todo move this out to home only
+@use '_posts';
 
 /*fonts*/
 @font-face {
