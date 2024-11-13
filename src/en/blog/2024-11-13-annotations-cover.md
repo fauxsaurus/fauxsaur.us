@@ -119,7 +119,7 @@ Thanks, Wikipedia!
 
 Speaking of hands, as mentioned (and evidenced) previously, the AI is bad at them. So, I opted to draw those myself. Namely, by tracing a better example (because drawing hands is _really_ hard). Naturally, I went with [Michelangelo's Creation of Adam](https://en.wikipedia.org/wiki/The_Creation_of_Adam) because paying homage to that painting had been my idea from the get-go (as I liked the idea of the character reaching out to a higher power[^12]). Also, I struggled to draw a decent second hand, so I just mirrored the first in the interest of time.
 
-Initially, I had wanted to put an additional twist on the pose in the form of auroras, but alas, neither \[this] man nor machine \[AI] could render a convincing aurora in the time I had left. They kept ending up as bad-looking clouds. (Next time ;) But essentially, my idea had been to have different strands of auroras "reaching" out in a vague hand shape, but that would admittedly have shifted the image's perception from awe-inspiring to creepy eldritch horror.
+Initially, I had wanted to put an additional twist on the pose in the form of auroras, but alas, neither \[this] man nor machine \[AI] could render a convincing aurora in the time I had left. They kept ending up as bad-looking clouds. (Next time.) But essentially, my idea had been to have different strands of auroras "reaching" out in a vague hand shape, but that would admittedly have shifted the image's perception from awe-inspiring to creepy eldritch horror.
 
 Thus, at the eleventh hour, I leaned into the intended emotion and tried to play up the sense of wonder by having the character reach out to twinkling snow just starting to fall from the clouds.
 
