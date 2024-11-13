@@ -1,4 +1,4 @@
-module.exports = () => {
+export default () => {
 	const isProduction = process.env.MY_ENVIRONMENT === 'production'
 
 	return {

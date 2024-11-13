@@ -1,8 +1,8 @@
 @charset "utf-8";
 
-@import '_reset';
-@import '_grid';
-@import '_posts';
+@use '_reset';
+@use '_home'; // @todo move this out to home only
+@use '_posts';
 
 /*fonts*/
 @font-face {
@@ -138,7 +138,7 @@ header {
 }
 header a:hover,
 header a:hover * {
-	color: #f90;
+	color: var(--color-theme);
 	text-decoration: none;
 }
 /*scroll-progress-bar*/
@@ -152,7 +152,7 @@ header a:hover * {
 	width: 100%;
 }
 header:hover .scroll-progress-bar {
-	background-image: linear-gradient(#f93, #f93);
+	background-image: linear-gradient(var(--color-theme), var(--color-theme));
 }
 /*main*/
 main {
