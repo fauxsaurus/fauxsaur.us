@@ -30,7 +30,7 @@ layout: base.njk
 <h2>Annotations</h2>
 <p>These are some behind-the-scenes blog posts cataloging the book's development, chapter by chapter.</p>
 <ol>
-	{% for post in (collections.post | _getLangPosts(page.lang)) .reverse().slice(0, 13) %}
+	{% for post in (collections.post | _getLangPosts(page.lang)) %}
 	<li>
 		<a href="{{ post.url }}">{{ post.data.title }}</a>
 	</li>
