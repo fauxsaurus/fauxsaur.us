@@ -33,11 +33,19 @@
 }
 .post img {
 	display: block;
-	height: 20rem;
 	margin: 0 auto;
-	width: auto;
-	max-width: 100%;
 }
+
+.post img[data-orientation='landscape'] {
+	height: auto;
+	width: 100%;
+}
+.post img[data-orientation='portrait'],
+.post img[data-orientation='square'] {
+	height: 20rem;
+	width: auto;
+}
+
 .post b,
 .post date {
 	color: #fff;

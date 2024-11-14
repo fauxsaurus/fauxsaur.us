@@ -91,7 +91,17 @@ export default config => {
 				},
 			})
 
-			return Image.generateHTML(metadata, {alt, sizes, loading: 'eager', decoding: 'async'})
+			const {height = 0, width = 0} = Object.values(metadata).flat()[0]
+			const orientation =
+				width > height ? 'landscape' : height > width ? 'portrait' : 'square'
+
+			return Image.generateHTML(metadata, {
+				alt,
+				'data-orientation': orientation,
+				sizes,
+				loading: 'eager',
+				decoding: 'async',
+			})
 		}
 	)
 
