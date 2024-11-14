@@ -1,8 +1,5 @@
 ---
-desc: Here are a few tips and tricks that helped me slim down my wardrobe.
-img: ./img/ghost-girl-book-cover.jpg
-imgAlt: Clothing cubes about halfway through the week.
-imgSize: 1600
+desc: Behind the scenes annotations for the cover of Ghost Girl and the Ghost Giant.
 tags: [post, Ghost Girl and the Ghost Giant, annotations, art]
 title: 'Annotations: The Cover'
 ---
