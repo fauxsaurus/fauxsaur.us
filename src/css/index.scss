@@ -50,12 +50,6 @@ figure img {
 	display: block;
 	margin: auto;
 }
-figure [data-orientation='landscape'] {
-	width: 100%;
-}
-figure [data-orientation='portrait'] {
-	max-height: 21rem;
-}
 figure:hover a.pin {
 	display: block;
 	height: 1.5rem;
