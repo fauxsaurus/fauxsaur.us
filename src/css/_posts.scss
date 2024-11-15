@@ -28,6 +28,11 @@
 	}
 }
 
+/** @note adds space between the date and the heading */
+[itemprop='articleBody'] > h2:first-child {
+	margin-top: 1rem;
+}
+
 .post div {
 	position: relative;
 }
