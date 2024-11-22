@@ -4,7 +4,7 @@ tags: [post, Ghost Girl and the Ghost Giant, annotations]
 title: 'Annotations: Dedication'
 ---
 
-It has always been a minor pet peeve of mine when authors dedicate all their books to their spouses. To be clear, I don't begrudge anyone for doing so--it's certainly within their right, and rationally, I don't see anything wrong with it. But deep down, part of that practice has always bugged me because there are so many people in my life I'd like to dedicate things to (or maybe this "admirable desire" merely stems from an idiosyncrasy to never do the same thing twice).
+It has always been a minor pet peeve of mine when authors dedicate all their books to their spouses. To be clear, I don't begrudge anyone for doing so—it's certainly within their right, and rationally, I don't see anything wrong with it. But deep down, part of that practice has always bugged me because there are so many people in my life I'd like to dedicate things to (or maybe this "admirable desire" merely stems from an idiosyncrasy to never do the same thing twice).
 
 Irrespective of underlying motivations, this book isn't dedicated to any one individual in particular, as I felt that there were more relevant writings I'd done (or would like to do) that would be more fitting for the usual suspects. As such, I hadn't given much thought to who to dedicate this work to until I was determining what pages were absolutely necessary to slot in before the story.
 
