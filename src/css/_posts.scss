@@ -51,6 +51,11 @@
 	width: auto;
 }
 
+/** @note Temporary fix. A better, permanent solution would likely be to have a margin on both top and bottom (with the upper margin being slightly morre to better visually align the heading with the text below). */
+ul + h2 {
+	margin-top: 1rem;
+}
+
 .post b,
 .post date {
 	color: #fff;
