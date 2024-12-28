@@ -1,36 +1,5 @@
-.posts {
-	list-style-type: none;
-	margin-left: 0;
-}
-/*@note THIS WILL NEED TO CHANGE IN THE FUTURE IF EMBEDDING 
-		RECENT/RELATED ARTICLES AT THE BOTTOM OF PAGES!!*/
-.post:first-child {
-	width: 100%;
-}
-.post:not(:first-child) {
-	font-size: 0.75rem;
-}
-.post {
-	float: left;
-	padding: 1rem;
-}
-
-@for $i from 1 through 6 {
-	h#{7 - $i}[id]:hover a[href^='#'] {
-		position: relative;
-
-		&::before {
-			content: '#';
-			position: absolute;
-			left: -0.8em;
-			text-decoration: underline;
-		}
-	}
-}
-
-/** @note adds space between the date and the heading */
-[itemprop='articleBody'] > h2:first-child {
-	margin-top: 1rem;
+article {
+	display: flex;
 }
 
 .post div {

@@ -1,0 +1,164 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	--color-background: #f8f8f8;
+	--color-black: #222;
+	--color-white: #fff;
+	--color-theme: #4ab879;
+
+	--font-headings: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica,
+		Arial, 'Lucida Grande', sans-serif;
+	--font-default: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica,
+		Arial, 'Lucida Grande', sans-serif;
+
+	--header-height: 2.5rem;
+
+	--padding-header: 0.5rem;
+	--padding-main: calc(var(--padding-header) * 2);
+	--padding-footer: calc(var(--padding-header) * 2);
+
+	--time-transitions: 0.2s;
+
+	background: var(--color-background);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+::selection {
+	background-color: var(--color-theme);
+	color: var(--color-white);
+}
+
+a:hover {
+	color: var(--color-theme);
+}
+@media (hover: hover) and (pointer: fine) {
+	a:hover {
+		color: var(--color-theme);
+	}
+}
+
+main {
+	padding: var(--padding-main);
+	padding-top: calc(var(--padding-main) / 2);
+}
+
+main,
+article,
+[itemprop='articleBody'] {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	font-family: var(--font-default);
+	gap: var(--padding-main);
+	margin: auto;
+	padding: var(--padding-main);
+	padding-top: calc(var(--padding-main) / 2);
+}
+
+article {
+	max-width: 75ch;
+}
+
+[itemprop='articleBody'] {
+	padding: 0;
+}
+
+#footnote-label {
+	margin-bottom: var(--padding-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-headings);
+	margin-block-start: 0;
+	margin-block-end: calc(-0.5 * var(--padding-main));
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+	text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) {
+	h1:hover a,
+	h2:hover a,
+	h3:hover a,
+	h4:hover a,
+	h5:hover a,
+	h6:hover a {
+		color: var(--color-theme);
+		text-decoration: underline;
+	}
+}
+
+.small-heading {
+	font-size: 92.5%;
+}
+
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	max-width: 75ch;
+}
+
+ol,
+ul {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	padding-inline-start: calc(var(--padding-main) * 1.5);
+}
+
+.book-cover {
+	position: relative;
+}
+.book-cover::before {
+	background: linear-gradient(
+		90deg,
+		#0003 0%,
+		#0003 0.5%,
+		#fff3 0.5%,
+		#fff3 2%,
+		#0003 4%,
+		#fff3 5%,
+		transparent 5%,
+		transparent 100%
+	);
+	border-radius: 0.2rem;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.book-cover img {
+	box-shadow: 0 0 0.2rem -1px black;
+	border-radius: 0.2rem;
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.fine-print {
+	font-size: 0.9rem;
+	text-align: center;
+}
