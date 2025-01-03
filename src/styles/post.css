@@ -1,0 +1,51 @@
+article {
+	display: flex;
+}
+
+.post div {
+	position: relative;
+}
+.post img {
+	display: block;
+	margin: 0 auto;
+}
+
+.post img[data-orientation='landscape'] {
+	height: auto;
+	width: 100%;
+}
+.post img[data-orientation='portrait'],
+.post img[data-orientation='square'] {
+	height: 20rem;
+	width: auto;
+}
+
+/** @note Temporary fix. A better, permanent solution would likely be to have a margin on both top and bottom (with the upper margin being slightly morre to better visually align the heading with the text below). */
+ul + h2 {
+	margin-top: 1rem;
+}
+
+.post b,
+.post date {
+	color: #fff;
+	padding: 0.5em 1em;
+	position: absolute;
+	text-shadow: 0 0 0.5em #000;
+}
+.post b {
+	left: 0;
+	top: 0;
+}
+.post date {
+	bottom: 0;
+	padding: 0.5em 1em;
+	position: absolute;
+	right: 0;
+}
+.post a:hover b {
+	text-shadow: 0 0 0.5em #fff;
+}
+.post .desc {
+	line-height: 120%;
+	margin-top: 0;
+}

@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"allowJs": true, // required, and included with all Astro templates
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
+		"strictNullChecks": true // add if using `base` template
+	},
+	"extends": "astro/tsconfigs/strict",
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["dist"]
+}

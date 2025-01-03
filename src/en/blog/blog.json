@@ -1,6 +1,0 @@
-{
-	"author": "Andrew R. H. Quinn",
-	"layout": "post.njk",
-	"permalink": "{{[lang, localization.blog, page.date, page.fileSlug] | _post2permalink}}",
-	"type": "article"
-}

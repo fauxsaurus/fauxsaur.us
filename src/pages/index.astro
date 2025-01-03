@@ -1,0 +1,10 @@
+---
+import {SITE} from '../meta'
+/** @todo get this to redirect to other pages based on the user's language (and availablility of said languages) */
+---
+
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Redirecting to { SITE.url }/en/</title>
+<meta http-equiv="refresh" content={`0; URL=${SITE.url}/en/`} />
+<link rel="canonical" href={ `${SITE.url}/en/` } />
