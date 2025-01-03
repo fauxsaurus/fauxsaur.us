@@ -6,6 +6,7 @@ html,
 body {
 	--color-background: #f8f8f8;
 	--color-black: #222;
+	--color-links: #09c;
 	--color-white: #fff;
 	--color-theme: #4ab879;
 
@@ -35,6 +36,10 @@ body {
 ::selection {
 	background-color: var(--color-theme);
 	color: var(--color-white);
+}
+
+main a {
+	color: var(--color-links);
 }
 
 a:hover {
@@ -106,6 +111,19 @@ h6 a {
 	h5:hover a,
 	h6:hover a {
 		color: var(--color-theme);
+		position: relative;
+		text-decoration: underline;
+	}
+
+	h1:hover a::before,
+	h2:hover a::before,
+	h3:hover a::before,
+	h4:hover a::before,
+	h5:hover a::before,
+	h6:hover a::before {
+		content: '#';
+		position: absolute;
+		left: -1ch;
 		text-decoration: underline;
 	}
 }
