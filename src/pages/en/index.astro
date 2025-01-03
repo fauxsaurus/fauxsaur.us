@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import {blogId2slug, getBlogPosts} from '../../lib'
+import { BOOKS, SITE } from '../../meta';
+import imageCover from '../../img/ghost-girl-book-cover.jpg'
+
+import '../../styles/home.css'
+
+const posts = await getBlogPosts()
+
+export const filename = 'feed.xml'
+---
+
+<Layout description={SITE.description}>
+	<h1 id="embers-of-the-nephilim-ghost-girl-and-the-ghost-giant">
+		<a href="#embers-of-the-nephilim-ghost-girl-and-the-ghost-giant">
+			Embers <span class="small-heading">of the</span> Nephilim: Ghost Girl <span class="small-heading">and the</span> Ghost Giant
+		</a>
+	</h1>
+	<section class=grid-book-and-desc>
+		<div class="book-cover">
+			<Image src={imageCover} alt="Book cover showing a young superhero jumping in front of the moon on a cloudy night." />
+		</div>
+		<p>Thirteen-year-old Olivia Linda Wade has been plagued by a ghost that no one else quite seems to believe exists. But when things come to a head, she'll get swept up in a police investigation looking into a recently apprehended vigilante from Detroit and cross paths with others who've come face-to-face with the ghost along the way. Will she and her ragtag team come together and rise to the occasion to defeat her tormentor before time runs out? Only one way to find out!</p>
+	</section>
+	<h2 id="available-on">
+		<a href="#available-on">Available On:</a>
+	</h2>
+	<ul>
+	{BOOKS.map(book => {
+		return Object.entries(book.storefronts).map(([name, storefront]) => {
+			return <li>{name}: {Object.entries(storefront).map(([format, url], i, {length}) => {
+					const isLast = i===length -1
+
+					return <>
+						<a href={url} target="_blank">{format}</a>{!isLast ? ', ' : ''}
+					</>
+				})
+			}</li>
+		})
+	})}
+	</ul>
+	<h2 id="annotations">
+		<a href="#annotations">Annotations</a>
+	</h2>
+	<p>These are some behind-the-scenes blog posts cataloging the book's development.</p>
+	<ol>
+		{posts.filter(post => 
+				post.data.tags.includes('Ghost Girl and the Ghost Giant') && post.data.tags.includes('annotations')
+			).map(post => {
+				return (<li>
+				<a href={`/en/blog/${blogId2slug(post.id)}/`}>{ post.data.title }</a>
+			</li>)
+		})}
+	</ol> 
+</Layout>

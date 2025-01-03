@@ -1,6 +1,6 @@
 ---
 desc: Behind the scenes annotations for the series title of Ghost Girl and the Ghost Giant, Embers of the Nephilim.
-tags: [post, Ghost Girl and the Ghost Giant, annotations]
+tags: [Ghost Girl and the Ghost Giant, annotations]
 title: 'Annotations: The Title'
 ---
 
@@ -28,8 +28,13 @@ Regardless of the series title, it's an honor to be inducted into the _Ghost Gir
 1. And as Amazon is now showing me, there are [too](https://www.amazon.com/Ghost-Girl-Freak-House-Trilogy/dp/0992583446/) [many](https://www.amazon.com/Ghost-Girl-Echoes-Brooke-Carter/dp/145983688X) [others](https://www.amazon.com/Ghost-Girl-Patti-M-Walsh/dp/1639885730) [to](https://www.amazon.com/Girl-Ghost-Hanna-Alkaf/dp/0062940961) [list](https://www.amazon.com/Ghost-Girl-Penguin-Poets-Gerstler/dp/0142000647).
 
 [^1]: Lovingly, internally referred to by its project name: _4G_, because _Ghost Girl and the Ghost Giant_ is a mouthful!
+
 [^2]: And simultaneously lay the groundwork for a better umbrella term for sister series and spinoffs down the line. (Because that's good for SEO, and coming up with good, non-taken names is _hard_.)
+
 [^3]: Which naturally has a white-haired protagonist and a lovely outline of a spectral-like giant in the background—so it's good to know that I'm in good company! (The Standalone Complex is strong in this ~~one~~ idea).
+
 [^4]: Alas, "Great minds think alike." (But that's only half the quote, nonetheless, I hope that the second part of Dabridgcourt Belchier's statement doesn't apply here: "But fools rarely differ.")
+
 [^5]: As a Sanderson fan, part of me liked how this title would have been a nice homage to Stormlight, but I felt that would have been a double-edged sword given the latter's popularity, so even a hypothetical perception of copying the trappings of a far more successful brand undermined the perception of that title in my eyes.
+
 [^6]: Alas, [Kyle Jorve](https://kylejorve.com) is working on a project by that name! Why are all the good names always taken?

@@ -1,6 +1,6 @@
 ---
 desc: Behind the scenes annotations for the dedication of Ghost Girl and the Ghost Giant.
-tags: [post, Ghost Girl and the Ghost Giant, annotations]
+tags: [Ghost Girl and the Ghost Giant, annotations]
 title: 'Annotations: Dedication'
 ---
 
