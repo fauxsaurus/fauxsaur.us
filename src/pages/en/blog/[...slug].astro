@@ -1,0 +1,43 @@
+---
+import {render} from 'astro:content';
+import {blogId2pubDate, blogId2slug, createH1, getStaticPaths} from '../../../lib/'
+import Layout from '../../../layouts/Layout.astro';
+import { SITE, SOCIAL } from '../../../meta';
+
+import '../../../styles/post.css'
+
+const {post} = Astro.props;
+const {Content} = await render(post);
+
+const h1 = await createH1(post.data.title)
+const rfc3339Timestamp =  new Date(blogId2pubDate(post.id)).toISOString()
+
+const editUrl = `${SOCIAL.find(social => social.name==='github')!.url}/fauxsaur.us/blob/main/${post.filePath}`
+const pageUrl = SITE.url + blogId2slug(post.id) + '/'
+
+export {getStaticPaths}
+---
+<Layout description={post.data.desc} title={post.data.title} url={pageUrl}>
+	<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+		{h1}
+		<time datetime={rfc3339Timestamp} itemprop="datePublished">{blogId2pubDate(post.id)}</time>
+		<div itemprop="articleBody">
+			<Content />
+		</div>
+		<!-- <ul class="tags">
+			{post.data.tags.map((tag) => {
+				return <li class="tag">
+					<a href="{{ site.url }}/{{ page.lang }}/search.html?tag={{ tag | xml_escape }}">
+						{tag}
+					</a>
+				</li>
+			})}
+		</ul> -->
+	</article>
+	<aside>
+		<p class="fine-print">
+			Found a spelling/grammar mistake or want to help translate this page? Let us know
+			<a href={editUrl} target="_blank">here</a>!
+		</p>
+	</aside>
+</Layout>

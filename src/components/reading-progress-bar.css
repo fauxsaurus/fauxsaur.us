@@ -1,0 +1,12 @@
+[data-component='reading-progress-bar'] {
+	background-image: linear-gradient(var(--color-theme), var(--color-theme));
+	background-repeat: no-repeat;
+	display: block;
+	left: 0;
+	/** @note height is being ignored for some reason */
+	min-height: 0.2rem;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
