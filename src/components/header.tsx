@@ -15,7 +15,10 @@ export const Header = (props: IProps) => {
 	return (
 		<header data-component="site-header">
 			<a children={props.skipto} hidden href="#main" />
-			<a href={homepageUrl}>{homeText}</a>
+			<a href={homepageUrl}>
+				<span class="icon"></span>
+				{homeText}
+			</a>
 			<input aria-hidden="true" hidden id="nav-bar-toggle" type="checkbox" />
 			<label aria-hidden="true" for="nav-bar-toggle"></label>
 			<nav>

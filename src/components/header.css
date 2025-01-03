@@ -10,6 +10,15 @@
 	text-transform: capitalize;
 	width: 100%;
 
+	/** @todo make this more template-able */
+	.icon {
+		aspect-ratio: 1;
+		background-image: url('data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzEwMCcgd2lkdGg9JzEwMCcgdmlld0JveD0nMCAwIDEwMCAxMDAnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PGcgdHJhbnNmb3JtPSdzY2FsZSgwLjQyNSwwLjQyNSknPjxwYXRoIGQ9J00gMTcxLjE5OTQ5LDY0LjA4ODY0IEMgMTU2LjM2MTkzLDM4Ljg0MTc4MyAxMzMuMjEwNCwzMC4xNjkxODIgMTE4LjY1MjQxLDMwLjE2OTE4MiBjIC0xNC42ODU0MywwIC0zNS40NzA1NTcsOS4xOTMzMyAtNTAuMjQyNzM3LDM0LjQxMjIyOSBDIDUzLjYzNzQ5NCw4OS44MDAzMTIgNDguMDE0MzMsMTA2Ljc4MTgxIDQ4LjAxNDMzLDEzMC4zNjg4NyBjIDAsMjQuMTE0MTkgNy4xNTUyNDMsNDMuOTk0NjEgMjAuNjkzNjMyLDU3LjQ5MzU0IDEyLjUyNzAxOSwxMi40OTA4NCAyOS43OTc2MTMsMTkuMDkzNTQgNDkuOTQ0NDQ4LDE5LjA5MzU0IDIwLjE0NjgzLDAgMzcuNDE4MjUsLTYuNjAxODYgNDkuOTQ1MjcsLTE5LjA5MzUzIDEzLjUzNzU3LC0xMy40OTg5MyAyMC42OTM2MywtMzMuMzc5MzUgMjAuNjkzNjMsLTU3LjQ5MzU0IDguM2UtNCwtMjMuNTMxOTkgLTMuMjU0MjcsLTQxLjAzMzM4NCAtMTguMDkxODIsLTY2LjI4MDI0IHonIGZpbGw9JyNmZmYnIHN0cm9rZT0nbm9uZScgLz48L2c+PC9zdmc+Cg==');
+		background-size: 100% 100%;
+		display: flex;
+		width: 1.2em;
+	}
+
 	a:not([hidden]),
 	label {
 		align-items: center;
