@@ -1,0 +1,43 @@
+---
+import {rehype} from 'rehype'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
+
+import Layout from '../../layouts/Layout.astro';
+import {blogId2pubDate, blogId2slug, getBlogPosts} from '../../lib'
+import {SITE} from '../../meta';
+
+const createHeading = async (heading: string) =>
+	await rehype()
+		.data('settings', {fragment: true})
+		.use(rehypeSlug)
+		.use(rehypeAutolinkHeadings, {behavior: 'wrap'})
+		.process(`<h2>${heading}</h2>`)
+
+const id2monthHeading = (id: string) => new Date(blogId2pubDate(id)).toLocaleDateString('en-US', {year: 'numeric', month: 'long'})
+
+const posts = (await getBlogPosts()).map(post => ({
+	link: `/en/blog/${blogId2slug(post.id)}/`,
+	month: id2monthHeading(post.id),
+	title: post.data.title
+}))
+---
+
+<Layout description={SITE.description}>
+	<h1 id="blog">
+		<a href="#blog">Blog</a>
+	</h1>
+	<p>A chronological list of all blog posts on this site.</p>
+	{Object.entries(Object.groupBy(posts, ({month}) => month)).reverse().map(([month, posts]) => {
+		return (<>
+			{createHeading(month)}
+			<ul>
+				{(posts ?? []).slice().reverse().map(post => {
+					return (<li>
+						<a href={post.link}>{post.title}</a>
+					</li>)
+				})}
+			</ul>
+		</>)
+	})}
+</Layout>
