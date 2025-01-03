@@ -1,0 +1,49 @@
+---
+import {Analytics, Footer, Header, ReadingProgressBar, Social} from '../components'
+import {ACCESSIBILITY, DEFAULT_LANGUAGE, NAV_BAR, SITE, SOCIAL} from '../meta'
+
+import '../styles/index.css'
+
+/** @todo _Should_ feed.xml differ in other languages? */
+// @todo escape astro props desc, add CSS to bottom of head or import, redo social meta stuff, redo all double curly brace stuff, spinoff analytics component, localize skipto content, xml feed
+
+const lang = Astro.props.lang ?? DEFAULT_LANGUAGE
+const pageTitle = Astro.props.title || SITE.title
+const pageType = !Astro.props.title ? 'website' : 'article'
+const title = [Astro.props.title, SITE.title ].filter(txt=>txt).join(' | ')
+const urlPrefix = `${SITE.url}/${lang}/`
+const xmlURL = urlPrefix + 'feed.xml'
+const year = new Date().getFullYear();
+
+const homepageUrl = `${SITE.url}/${lang}/`
+const headerLinks = {[SITE.title]: homepageUrl, ...Object.fromEntries(Object.values(NAV_BAR[lang as keyof typeof NAV_BAR]).map(name => [name, homepageUrl + name + '/']))}
+const socialLinks = Object.fromEntries(SOCIAL.map(link => [link.name, link.name === 'rss' ? xmlURL : link.url]))
+
+const pageDesc = Astro.props.description || Astro.props?.content?.description || SITE.description
+const pageUrl = Astro.props.url || homepageUrl
+
+---
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={pageDesc} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<Social author={SITE.author} description={pageDesc} title={pageTitle} type={pageType} url={pageUrl} />
+		<link rel="alternate" type="application/rss+xml" title={ SITE.title } href={xmlURL} />
+	</head>
+	<body>
+		<Analytics token={SITE.analytics} />
+		<Header links={headerLinks} skipto={ACCESSIBILITY[lang as keyof typeof ACCESSIBILITY].skipTo}></Header>
+		<ReadingProgressBar client:only="solid-js" />
+		<main aria-label="content" id="main">
+			<slot />
+		</main>
+		<Footer socialLinks={socialLinks}>{`Copyright © ${year} ${SITE.title} All rights reserved.`}</Footer>
+	</body>
+</html>
