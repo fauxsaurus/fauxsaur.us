@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {SITE} from '../../meta';
+
+const apps = [
+    {
+        name: 'Screen Size',
+        icon: 'https://fauxsaurus.github.io/screen-size/favicon.svg',
+        url: 'https://fauxsaurus.github.io/screen-size/',
+    },
+]
+
+---
+<style>
+
+    .app {
+        display: inline-flex;
+        gap: 0.25em;
+        flex-direction: column;
+        text-align: center;
+        width:6em;
+    }
+
+    .app img {
+        box-shadow: 0 0 0.25em #000;
+        border-radius:25%;
+        margin:auto;
+        width: 100%;
+        transition: box-shadow var(--time-transition), width var(--time-transition);
+    }
+
+    .app:not(:hover) {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .app:hover img {
+        box-shadow: 0 0 0.25em #fff;
+    }
+
+</style>
+<Layout description={SITE.description}>
+	<h1 id="apps">
+		<a href="#apps">Apps</a>
+	</h1>
+	{apps.map((app) => 
+         (<a class="app" href={app.url}>
+            <img src={app.icon} />
+            {app.name}
+        </a>)
+    )}
+</Layout>
