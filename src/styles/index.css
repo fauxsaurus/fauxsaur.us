@@ -67,6 +67,7 @@ article,
 	margin: auto;
 	padding: var(--padding-main);
 	padding-top: calc(var(--padding-main) / 2);
+	min-width: min(100%, 75ch);
 }
 
 article {
