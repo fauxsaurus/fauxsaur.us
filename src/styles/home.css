@@ -9,9 +9,12 @@
 
 @media screen and (min-width: 45rem) {
 	.grid-book-and-desc {
+		align-items: center;
 		display: grid;
+		font-size: 1.025rem;
 		grid-template-columns: 12.5rem 1fr;
 		grid-column-gap: var(--padding-main);
+		text-align: center;
 	}
 
 	.grid-book-and-desc img {
