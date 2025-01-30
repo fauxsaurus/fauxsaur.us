@@ -4,8 +4,12 @@ import {SITE} from '../../meta';
 
 const apps = [
     {
+        name: 'Image Converter',
+        icon: 'https://fauxsaurus.github.io/image-converter/assets/icon.svg',
+        url: 'https://fauxsaurus.github.io/image-converter/',
+    },    {
         name: 'Screen Size',
-        icon: 'https://fauxsaurus.github.io/screen-size/favicon.svg',
+        icon: 'https://fauxsaurus.github.io/screen-size/icon.svg',
         url: 'https://fauxsaurus.github.io/screen-size/',
     },
 ]
@@ -16,6 +20,7 @@ const apps = [
     .app {
         display: inline-flex;
         gap: 0.25em;
+        margin-right:2rem;
         flex-direction: column;
         text-align: center;
         width:6em;
@@ -43,10 +48,12 @@ const apps = [
 	<h1 id="apps">
 		<a href="#apps">Apps</a>
 	</h1>
-	{apps.map((app) => 
-         (<a class="app" href={app.url}>
-            <img src={app.icon} />
-            {app.name}
-        </a>)
-    )}
+    <div class="app-grid">
+        {apps.map((app) => 
+            (<a class="app" href={app.url}>
+               <img src={app.icon} />
+               {app.name}
+           </a>)
+       )}
+    </div>
 </Layout>
