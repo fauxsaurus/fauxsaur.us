@@ -12,7 +12,7 @@ function log_message(string $message) {
 }
 
 function stop_early(int $httpCode, string $type, string $message) {
-	log_message($type . $message);
+	log_message($type . ": " . $message);
 	http_response_code($httpCode);
 	exit($message);
 }
@@ -46,7 +46,7 @@ $commands = [
 	"git pull origin main",
 	"npm install",
 	"npm run build",
-	"rsync -av --delete --exclude '.htaccess' {$pathRepo}dist/ {$pathDeploy}"
+	"rsync -av --delete --exclude '.htaccess' --exclude '.well-known/' {$pathRepo}dist/ {$pathDeploy}"
 ];
 
 $output = '';
