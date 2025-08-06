@@ -18,10 +18,10 @@ function stop_early(int $httpCode, string $type, string $message) {
 }
 
 // CHECK ENVARS
-if (empty($webhookDeploySecret)) stop_early(500, "FATAL ERROR", "DEPLOY_SECRET envar not set.")
-if (empty($pathRepo)) stop_early(500, "FATAL ERROR", "PATH_REPO not set.")
-if (empty($pathDeploy)) stop_early(500, "FATAL ERROR", "PATH_DEPLOY envar not set.")
-if (empty($pathLogFile)) stop_early(500, "FATAL ERROR", "PATH_LOG envar not set.")
+if (empty($webhookDeploySecret)) stop_early(500, "FATAL ERROR", "DEPLOY_SECRET envar not set.");
+if (empty($pathRepo)) stop_early(500, "FATAL ERROR", "PATH_REPO not set.");
+if (empty($pathDeploy)) stop_early(500, "FATAL ERROR", "PATH_DEPLOY envar not set.");
+if (empty($pathLogFile)) stop_early(500, "FATAL ERROR", "PATH_LOG envar not set.");
 
 // VERIFY/SECRET
 $githubSignature = $_SERVER['HTTP_X_HUB_SIGNATURE_256'] ?? '';
@@ -46,7 +46,7 @@ $commands = [
 	"git pull origin main",
 	"npm install",
 	"npm run build",
-	"rsync -av --delete {$pathRepo}/dist/ {$pathDeploy}"
+	"rsync -av --delete --exclude '.htaccess' {$pathRepo}dist/ {$pathDeploy}"
 ];
 
 $output = '';
