@@ -1,0 +1,69 @@
+---
+desc: Behind the scenes annotations for the map in Ghost Girl and the Ghost Giant.
+tags: [Ghost Girl and the Ghost Giant, annotations]
+title: 'Annotations: Map'
+---
+
+import {Picture} from 'astro:assets'
+import {imgMetadata2orientation} from '../../lib'
+
+import imgMapHanddrawn from '../../img/map-handdrawn-greater-detroit-area.svg'
+import imgMapMakerMap from '../../img/map-maker-greater-detroit-area.png'
+
+<Picture
+	src={imgMapHanddrawn}
+	alt="A digitally handdrawn map of the Greater Detroit area showcasing locations from the book."
+	data-orientation={imgMetadata2orientation(imgMapMakerMap)}
+/>
+
+Modern, real-world settings are typically my least favorite in fiction, so if I enjoy a tale taking place in one, I like to think that it's quite exceptional for winning me over. With that in mind, I wasn't really sold on this story's premise until I came up with an intriguing idea: base the villains off of mythological figures. And as quirky as that sounds, it was nonetheless important for me and might have been the final impetus for making this tale click for me (and thereby, I selected it from one to two hundred others to work on). You see, I feel that villains (and, more broadly speaking, _obstacles_) play a vital role in stories because, without them, a hero can't accomplish impressive feats if there is nothing to overcome. Thus, antagonists must be formidable if the protagonist is to truly shine.
+
+## Pantheons
+
+Once I had the mythology idea, I had to select which mythology to pull from. Originally, I had envisioned Olivia as being part of a Justice League-like team, and so I had imagined each member's series drawing on different themes ranging from Scandinavian and Mediterranean to Egyptian, African, and more. At the outset, I gave all of those projects equal consideration to be the basis of my debut novel, but as much as I would have loved to learn about a new pantheon, I had to keep the scope of this book as small as possible. Thus I chose to stick with mythologies that I already knew quite well (RIP African and Asian legends).
+
+Although I was more familiar with Greek myths, I had a different, more mature, character in mind for that setting[^1], and so I went with the Scandinavian pantheon over the Egyptian one. Part of the rationale was that I had initially planned to center the Egyptian series around a protagonist from an ethnicity different than my own, and at the time I was assessing potential projects, there was a massive [controversy](https://www.pbs.org/newshour/arts/american-dirt-backlash-from-latino-readers-is-part-of-a-long-publishing-war) about a White author writing stories about people of color, and the refrain seemed to be that "they weren't her stories to tell." Thus, despite the project being near and dear to my heart, I was scared off from even considering it for my first outing[^2].
+
+## Location, Location, Location
+
+With the Scandinavian theme settled on, I wanted an appropriate location, so I opted for Detroit as it had a similar climate to Northern Europe and was also within the Rust Belt (thereby being culturally similar to where I grew up, which would cut down on research time--plus, my father's side originated from that area).
+
+Additionally, when I recently reviewed my notes from the original brainstorm I had when this project came to me[^3], I learned that I'd taken Detroit's more urban location into account in the initial story premise in that I wanted to put the protagonist in a slightly more rural environment that would be more inline with where I attended high school (another research time reduction).
+
+Thus, when I looked for a suitable location outside of Detroit, I was surprised to find the _perfect_ (i.e., thematically relevant) place a mere half hour away: _Plymouth_. You see, dear reader, Plymouth, MI is home to not only Salem High School[^4], but also a grade school by the name of _Spiritus Sanctus Academy_. There was also a creepy abandoned Psychiatric Hospital in nearby Northville and a children's equivalent in the form of Hawthorn Center practically next door[^5].
+
+## Why a Map?
+
+Interestingly, before the map was included, I had originally mentioned that the protagonist had attended the aforementioned grade school in the opening chapter. But that confused some beta readers (i.e., they thought the setting was more magical than mundane, possibly due to the book's description and the rather elaborate name giving them the idea that she actually attended some form of anime-like "spirit academy"). So, the Spiritus Sanctus part was moved to a section in the tale (i.e., Chapter Four), where the readers would already have the right idea in mind about the level of groundness in the setting.
+
+To further address--or outright eliminate--such potential confusion, I felt that including a map would be the way to go as it sets the proper tone[^6]. Naturally, this dovetailed nicely with my desire to include maps in the book from the outset as that's a fantasy novel trope, and I felt that including some would help sell the modern quest vibe that I intended to convey--plus, seeing mystic-adjacent names on a modern roadmap seemed like an interesting juxtaposition. So there, you have it, the long-winded reason there's a map in the book!
+
+Additionally, while I was writing, I felt that I had to balance the characters' local perspectives and that of the reader--who, like me, may very well have had no idea what's around Detroit. Thus, I wanted to extend the same courtesy I'd been given with a real-world map when researching. I wanted to try and alleviate the same sort of issues on a micro-level by including maps of other environments (i.e., vision, house, club, and Northville Psychiatric), but I ran out of time to include those and feel that the one at the beginning was the most important regardless.
+
+## How the ~~Sausage~~ Map ~~is~~ was Made
+
+<Picture
+	src={imgMapMakerMap}
+	alt="A map made with Map Maker showing the Greater Detroit area."
+	data-orientation={imgMetadata2orientation(imgMapMakerMap)}
+/>
+
+As for how this map was made, I used [Inkscape](https://inkscape.org/) and traced a custom map from [Map Maker](https://maps.co/) on a drawing tablet _by hand_. Choosing what to include was challenging, but I really wanted to include the three different types of streets, the highway and interstate numbers, and the points of interest. Originally, I hadn't meant to add Canada's roads, but that portion of the map looked too blank even with the scale[^7].
+
+Due to the dead space in the middle, I had originally wanted to have the maps span two pages to improve legibility and information density, but alas, I ran into _issues_ with uploading it to Amazon (but that's a tale for another time). Needless to say, I did write CSS media queries to split the image in half and rotate it horizontally if the document were to be printed.
+
+For those of you looking at the map and wondering how long it took, I, too, wonder the same thing. I didn't keep track, but I feel that it was a good time investment to help ground the reader in the world. Plus, I think the faux fancy calligraphy I came up with strikes a nice balance between clarity, looking significantly different than my own (as I am often writing for speed, not legibility), and appearing as if it were made by the protagonist. As with most things, I think that was a tall order as I wanted it to look good enough to appear in a published work but not so good that it seemed to have been made by a professional versus a certain fictional teenager.
+
+[^1]: I had heard that when the creators of _Teenage Mutant Ninja Turtles_ were originally deciding on what direction they wanted to take the franchise, they had to pick between a light-hearted, kid-friendly version and a darker and grittier rendition. In the end, they decided to go with the kid-friendly variant because they could then release the other version to an older audience that might have aged into it, as opposed to releasing something targeted at a younger crowd and asking the original fans to make the "step down." Thus, I did likewise and chose to kick things off with the youngest possible character in the bunch.
+
+[^2]: I sincerely hope that I will one day get the chance to tell the tale when I have more time to write, research, and reach out to others with different backgrounds than my own to make sure that I'm "getting it right" and that the characters feel real.
+
+[^3]: Note: At the time of writing, it feels as if this was one of two projects that materialized with such clarity-- which unfortunately makes it a rarity as none of the other ideas I've come up with over the years have ever come to me so nearly fully formed. That said, it was a bit distressing when it hit me, as I was at work, so I feverishly wrote it all down to get it out of my mind so that I could focus on the task at hand. But the ideas kept coming. I felt so bad that I ended up staying an extra fifteen minutes after I clocked out that day to ensure that I'd made up the difference.
+
+[^4]: Note: I drew the map above/in the book by hand and intentionally omitted the "School" part of the title for both brevity and time as my drawing tablet was being finicky with the lettering, and I did not want to try and write yet another word with my deadline rapidly approaching--sadly I did not reconsider this stance as I eventually ended up copying letters from other words I'd written and glancing back at the map now, I can see that all the letters for "school" were in fact available to pull from. \*facepalm\*
+
+[^5]: When drawing said map, I even discovered a place by the name of Steeplechase within the vicinity but didn't include it as it was not visited and both Plymouth/Northville and Detroit had an equal amount of points on the map already.
+
+[^6]: This was another balancing act as, philosophically,  I didn't want to rely on images as a crutch as I felt that they should compliment the prose--not _replace_ it. Additionally, with this work in particular, I did not want to assume that all readers would be able to see the image (e.g., blindness, low vision) or set myself up for failure with the eventual audiobook adaptation.
+
+[^7]: Note: the scale is actually accurate. I had to zoom in on Google Maps and overlay that screenshot with the Map Maker image to make sure the proportions were correct--as the custom map did not include a scale, but I do wish that I had had time to add little tick marks in between to make it look less bland and provide more realistic 1mi measurements.

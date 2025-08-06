@@ -10,8 +10,8 @@ export type ISupportedLanguages = keyof typeof LANGUAGES
 
 export const NAV_BAR = {
 	en: {
-		// blog: 'blog',
-		// apps
+		apps: 'apps',
+		blog: 'blog',
 		// books: 'books',
 		// music
 		// games
