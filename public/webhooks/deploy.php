@@ -3,6 +3,7 @@
 $webhookDeploySecret = getenv('DEPLOY_SECRET');
 $pathRepo = getenv('PATH_REPO');
 $pathDeploy = getenv('PATH_DEPLOY');
+$pathNvm = getenv('PATH_NVM');
 $pathLogFile = getenv('PATH_LOG');
 
 // UTILS
@@ -21,6 +22,7 @@ function stop_early(int $httpCode, string $type, string $message) {
 if (empty($webhookDeploySecret)) stop_early(500, "FATAL ERROR", "DEPLOY_SECRET envar not set.");
 if (empty($pathRepo)) stop_early(500, "FATAL ERROR", "PATH_REPO not set.");
 if (empty($pathDeploy)) stop_early(500, "FATAL ERROR", "PATH_DEPLOY envar not set.");
+if (empty($pathNvm)) stop_early(500, "FATAL ERROR", "PATH_NVM envar not set.");
 if (empty($pathLogFile)) stop_early(500, "FATAL ERROR", "PATH_LOG envar not set.");
 
 // VERIFY/SECRET
@@ -49,9 +51,10 @@ $commands = [
 	"rsync -av --delete --exclude '.htaccess' --exclude '.well-known/' {$pathRepo}dist/ {$pathDeploy}"
 ];
 
-$output = '';
-foreach ($commands as $command) $output .= shell_exec($command . ' 2>&1');
+// temporarily append nvm to path
+putenv("PATH={$pathNvm}:" . getenv('PATH'));
 
+echo shell_exec(join("; ", $commands) . ' 2>&1');
 log_message("DEPLOYMENT OUTPUT:\n" . $output);
 http_response_code(200);
 echo "Deployment successful.";
