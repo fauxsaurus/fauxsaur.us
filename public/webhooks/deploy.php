@@ -1,11 +1,4 @@
 <?php
-// CONFIG
-$webhookDeploySecret = getenv('DEPLOY_SECRET');
-$pathRepo = getenv('PATH_REPO');
-$pathDeploy = getenv('PATH_DEPLOY');
-$pathNvm = getenv('PATH_NVM');
-$pathLogFile = getenv('PATH_LOG');
-
 // UTILS
 function log_message(string $message) {
 	global $pathLogFile;
@@ -18,12 +11,12 @@ function stop_early(int $httpCode, string $type, string $message) {
 	exit($message);
 }
 
-// CHECK ENVARS
-if (empty($webhookDeploySecret)) stop_early(500, "FATAL ERROR", "DEPLOY_SECRET envar not set.");
-if (empty($pathRepo)) stop_early(500, "FATAL ERROR", "PATH_REPO not set.");
-if (empty($pathDeploy)) stop_early(500, "FATAL ERROR", "PATH_DEPLOY envar not set.");
-if (empty($pathNvm)) stop_early(500, "FATAL ERROR", "PATH_NVM envar not set.");
-if (empty($pathLogFile)) stop_early(500, "FATAL ERROR", "PATH_LOG envar not set.");
+// ENVARS
+[$webhookDeploySecret, $pathRepo, $pathDeploy, $pathNvm, $pathLogFile] = array_map(function($envar) {
+	$value = getenv($envar);
+	if (empty($value)) stop_early(500, "FATAL ERROR", "Environment variable " . $envar . " not set.");
+	return $value;
+}, explode(',', 'DEPLOY_SECRET,PATH_REPO,PATH_DEPLOY,PATH_NVM,PATH_LOG'));
 
 // VERIFY/SECRET
 $githubSignature = $_SERVER['HTTP_X_HUB_SIGNATURE_256'] ?? '';
