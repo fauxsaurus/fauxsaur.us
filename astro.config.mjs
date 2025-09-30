@@ -25,11 +25,4 @@ export default defineConfig({
 	},
 	output: 'static',
 	site: 'https://fauxsaur.us',
-	vite: {
-		server: {
-			watch: {
-				usePolling: true,
-			},
-		},
-	},
 })
