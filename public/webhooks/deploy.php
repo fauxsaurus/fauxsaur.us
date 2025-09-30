@@ -36,19 +36,10 @@ if ($ref !== 'refs/heads/main') stop_early(200, "INFO", "Push to non-main branch
 
 log_message("SUCCESS: Webhook signature verified. Deploying 'main' branch.");
 
-// RUN COMMANDS
-$commands = [
-	"cd {$pathRepo}",
-	"git pull origin main",
-	"npm install",
-	"npm run build",
-	"rsync -av --delete --exclude '.htaccess' --exclude '.well-known/' {$pathRepo}dist/ {$pathDeploy}"
-];
+// DEPLOY
+$args = escapeshellarg($pathDeploy) . " " . escapeshellarg($pathNvm);
+echo shell_exec("cd {$pathRepo}; ./scripts/deploy.sh {$args} 2>&1");
 
-// temporarily append nvm to path
-putenv("PATH={$pathNvm}:" . getenv('PATH'));
-
-echo shell_exec(join("; ", $commands) . ' 2>&1');
 log_message("DEPLOYMENT OUTPUT:\n" . $output);
 http_response_code(200);
 echo "Deployment successful.";
