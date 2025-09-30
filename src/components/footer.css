@@ -3,17 +3,17 @@
 	background-color: var(--color-black);
 	color: var(--color-white);
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	gap: var(--padding-footer);
 	font-family: var(--font-default);
 	justify-content: center;
 	padding: var(--padding-footer);
 	padding-top: calc(var(--padding-footer) * 1.5);
 
-	nav {
-		display: flex;
-		flex-direction: row;
-		gap: 1rem;
+	.copyright-notice {
+		flex-basis: 100%;
+		text-align: center;
 	}
 
 	[data-icon] {

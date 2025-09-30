@@ -10,11 +10,9 @@ type IProps = {
 
 export const Footer = (props: IProps) => (
 	<footer data-component="site-footer">
-		<nav>
-			{Object.entries(props.socialLinks).map(([name, url]) => (
-				<a data-icon={name} href={url} target="_blank" title={name}></a>
-			))}
-		</nav>
-		<span>{props.children}</span>
+		{Object.entries(props.socialLinks).map(([name, url]) => (
+			<a data-icon={name} href={url} target="_blank" title={name}></a>
+		))}
+		<span class="copyright-notice">{props.children}</span>
 	</footer>
 )
