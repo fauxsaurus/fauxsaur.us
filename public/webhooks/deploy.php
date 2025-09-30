@@ -2,11 +2,12 @@
 // UTILS
 function log_message(string $message) {
 	global $pathLogFile;
-	file_put_contents($pathLogFile, date('Y-m-d H:i:s') . "\t" . $message . "\n", FILE_APPEND);
+	$timestamp = date('Y-m-d H:i:s');
+	file_put_contents($pathLogFile, "{$timestamp}\t{$message}\n", FILE_APPEND);
 }
 
 function stop_early(int $httpCode, string $type, string $message) {
-	log_message($type . ": " . $message);
+	log_message("{$type}: {$message}");
 	http_response_code($httpCode);
 	exit($message);
 }
@@ -14,7 +15,7 @@ function stop_early(int $httpCode, string $type, string $message) {
 // ENVARS
 [$webhookDeploySecret, $pathRepo, $pathDeploy, $pathNvm, $pathLogFile] = array_map(function($envar) {
 	$value = getenv($envar);
-	if (empty($value)) stop_early(500, "FATAL ERROR", "Environment variable " . $envar . " not set.");
+	if (empty($value)) stop_early(500, "FATAL ERROR", "Environment variable {$envar} not set.");
 	return $value;
 }, explode(',', 'DEPLOY_SECRET,PATH_REPO,PATH_DEPLOY,PATH_NVM,PATH_LOG'));
 
