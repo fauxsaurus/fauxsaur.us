@@ -4,9 +4,10 @@
 
 html,
 body {
-	--color-background: #f8f8f8;
+	--color-background: #fff;
 	--color-black: #222;
-	--color-links: #09c;
+	--color-links: #0b76da;
+	--color-link-hover: #068847;
 	--color-white: #fff;
 	--color-theme: #4ab879;
 
@@ -43,11 +44,11 @@ main a {
 }
 
 a:hover {
-	color: var(--color-theme);
+	color: var(--color-link-hover);
 }
 @media (hover: hover) and (pointer: fine) {
 	a:hover {
-		color: var(--color-theme);
+		color: var(--color-link-hover);
 	}
 }
 

@@ -28,18 +28,22 @@
 		height: var(--header-height);
 		padding: var(--padding-header);
 		text-decoration: none;
-		transition: background-color var(--time-transitions);
+		transition:
+			background-color var(--time-transitions),
+			color var(--time-transitions);
 		user-select: none;
 	}
 
 	a:hover,
 	label:hover {
 		background-color: var(--color-theme);
+		color: var(--color-black);
 	}
 	@media (hover: hover) and (pointer: fine) {
 		a:hover,
 		label:hover {
 			background-color: var(--color-theme);
+			color: var(--color-black);
 		}
 	}
 
