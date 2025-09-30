@@ -56,8 +56,13 @@
 		padding-inline-start: 0;
 	}
 
+	label[for='nav-bar-toggle'] {
+		display: none;
+		font-size: 0;
+	}
+
 	@media screen and (max-width: 30rem) {
-		label {
+		label[for='nav-bar-toggle'] {
 			aspect-ratio: 1;
 			/** @note adapted from: https://codepen.io/artem-isaev/pen/RmyrOp */
 			background-image: linear-gradient(

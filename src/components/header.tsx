@@ -20,7 +20,9 @@ export const Header = (props: IProps) => {
 				{homeText}
 			</a>
 			<input aria-hidden="true" hidden id="nav-bar-toggle" type="checkbox" />
-			<label aria-hidden="true" for="nav-bar-toggle"></label>
+			<label aria-hidden="true" for="nav-bar-toggle">
+				toggle
+			</label>
 			<nav>
 				<ul>
 					{links.map(([children, href]) => (
