@@ -13,6 +13,11 @@ export const BOOKS = [
 			'Barnes & Noble': {
 				ebook: 'https://www.barnesandnoble.com/w/embers-of-the-nephilim-andrew-r-h-quinn/1146490023',
 			},
+			'Bookshop.org': {
+				ebook: 'https://bookshop.org/p/books/embers-of-the-nephilim-ghost-girl-and-the-ghost-giant-andrew-r-h-quinn/22701259?ean=9798991921916&digital=t',
+				paperback:
+					'https://bookshop.org/p/books/embers-of-the-nephilim-ghost-girl-and-the-ghost-giant-andrew-r-h-quinn/22701259?aid=108406&ean=9798991921909&listref=published-fauxsaurus',
+			},
 			'Google Play': {ebook: 'https://play.google.com/store/books/details?id=giktEQAAQBAJ'},
 		},
 	},
